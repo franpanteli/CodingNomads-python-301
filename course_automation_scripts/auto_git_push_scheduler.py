@@ -3,13 +3,12 @@ import time
 import os
 import sys
 
-# Correct path to your auto_git_push.py script
-script_path = os.path.join(
-    os.path.dirname(__file__), "auto_git_push.py"
-)
+# Use a relative path to auto_git_push.py
+script_path = os.path.join(os.path.dirname(__file__), "auto_git_push.py")
 
-def run_git_push():
-    print("\nRunning auto_git_push.py...")
+def run_git_push(run_count):
+    print(f"\n--- Run #{run_count} ---")
+    print("Running auto_git_push.py...")
     try:
         subprocess.run(["python3", script_path], check=True)
         print("auto_git_push.py completed successfully.\n")
@@ -26,13 +25,15 @@ def progress_bar(duration=60):
         sys.stdout.write(f"\rWaiting for next run: |{bar}| {percent}%")
         sys.stdout.flush()
         time.sleep(1)
-    print()  # Move to a new line after the bar finishes
+    print()  # Move to a new line when done
 
 def main():
     print("Starting auto_git_push scheduler (runs every 1 minute)...\n")
+    run_count = 1
     while True:
-        run_git_push()
-        progress_bar(60)  # 60 seconds
+        run_git_push(run_count)
+        progress_bar(60)  # Wait 1 minute
+        run_count += 1
 
 if __name__ == "__main__":
     main()
