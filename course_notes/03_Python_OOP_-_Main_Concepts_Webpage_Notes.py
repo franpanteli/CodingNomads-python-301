@@ -10,4 +10,74 @@
             -> additional resources 
         -> summary: Python OOP main concepts
             -> OOP paradigm 
+    -> four traits of OOP 
+        -> traits of OOP (these are called traits)
+            -> 1. abstraction 
+            -> 2. encapsulation 
+            -> 3. inheritance
+            -> 4. polymorphism 
+            -> exploring the theory of each OOP trait
+            -> then going through practical examples in the course
+        -> four traits of OOP 
+            -> 1. ABSTRACTION <- E.G, AN ABSTRACT IDEA OF SOMETHING
+                -> ABSTRACTION IS REDUCING INFORMATION TO ITS ESSENTIAL CONCEPTS
+                -> CREATING A BLACK BOX WHEN WE WRITE THE CODE 
+                    -> the users only need to know how to use it 
+                        -> not the contents and capacities of it 
+                -> AN ABSTRACTED, HIGH-LEVEL INTERFACE
+                -> A PYTHON CLASS IS AN ABSTRACTION LAYER
+                    -> a unit of abstraction 
+                    -> we tell it the data and the code that operates on it 
+            -> 2. ENCAPSULATION 
+                -> BINDING (ENCAPSULATING) THE DATA AND THE CODE THAT CHANGES IT TOGETHER 
+                -> FOR SECURITY 
+                -> A PUBLIC INTERFACE THAT EXPOSES THE DATA WE WANT ACCESSED 
+                -> A PRIVATE INTERFACE FOR THE DATA AND DEVELOPER-ONLY METHODS
+                -> we can speak of an object when this is the case
+                -> Python doesn't have strong encapsulation 
+                    -> private interfaces aren't entirley private 
+            -> 3. inheritance 
+                -> parent and child objects
+                    -> subsclasses inherit from classes
+                    -> apples inheriting from the fuit class
+            -> 4. POLYMORPHISM
+                -> HAVING MANY FORMS
+                -> OBJECTS BELONGING TO DIFFERENT CLASSES RESPONDING TO THE SAME MESSAGE
+                -> they can respond in different ways 
+                -> this comes in combination with inheritance
+                    -> the parent class defines a method and the child class can handle the inherited method in 
+                        different ways 
+                    -> dog and cat images
+                        -> a dog and cat image set
+                        -> both inheriting from the animal class
+                        -> the .greet() method can be inherited from the animal class, but then used in different ways
+                        -> THE .greet() METHOD HAS A DIFFERENT OUTCOME WHEN CALLED ON A DOG VS CAT OBJECT, BUT BOTH 
+                            INHERIT IT FROM THE ANIMAL CLASS
+                    -> YOU CAN DEFINE AN EMPTY greet() METHOD IN THE Animal CLASS AND THEN OVERWRITE IT FOR THE 
+                        DIFFERENT ANIMAL SPECIES THAT INHERIT FROM THAT CLASS
+                    -> writing our own objects can be more useful than existing Python data structures 
+                -> 5. composition 
+                    -> COMPOSITION IS LIKE INHERITANCE, A FUNCTION OF A FUNCTION 
+                    -> smaller objects  components than what are defined through what they are
+                    -> we can build larger objects from smaller ones 
+                    -> THIS IS NOT THE SAME AN INHERITANCE  
+                    -> INHERITANCE HAS A SEVERAL-TIRED CHAIN OF INHERITANCE, WHERE NO INDIVIDUAL SUBCLASS CAN BE 
+                        INDEPENDENTLY USED 
+            -> summary 
+                -> OOP BUILDS ON FOUR CONCEPTS 
+                    -> 1. ABSTRACTION: CREATES A BLACK BOX SHOWING WHAT'S NECESSARY, IN A UI 
+                        -> MAKING THE ENTIRE PROGRAM ABSTRACT 
+                    -> 2. ENCAPSULATION: ENCAPSULATING THE CODE AND THE DATA TOGETHER, SO THAT THEY ARE MORE SEUCRE 
+                        -> this relies on BINDING data and logic, exposing a public interface and hiding other parts in 
+                            a private interface 
+                    -> 3. inheritance: child classes inheriting from parent classes
+                    -> 4. POLYMORPHISM: DIFFERENT FORMS OF THE SAME THING 
+                        -> different classes being able to implement the same attributes and methods, but handling logic 
+                            differently 
+                    -> 5. COMPOSITION: TO BUILD A COMPOSITE OF ONE OR MORE SMALLER OBJECTS 
+                        -> each object is a smaller part of the whole
+                        -> TO DEFINE AN OBJECT BY WHAT IT HAS RATHER THAN WHAT IT IS
+                        -> FOR LARGER OBJECTS TO BE BUILT FROM SMALLER ONES
+            -> next <- the difference between inheritance and composition in OOP 
+                -> one is a function of the other, vs one object is inheriting attributes and methods from the other
 """
