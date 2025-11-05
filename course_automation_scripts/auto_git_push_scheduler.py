@@ -24,12 +24,14 @@ def auto_git_push():
         )
 
         if "nothing to commit" in commit_result.stdout.lower():
-            print(f"No changes to commit at {timestamp}")
+            print(f"No new changes to commit at {timestamp}")
         else:
             print(f"Committed changes at {timestamp}")
-            # Push to remote
-            subprocess.run(["git", "push"], check=True)
-            print(f"Pushed changes successfully at {timestamp}")
+
+        # Always attempt to push (even if nothing new to commit)
+        subprocess.run(["git", "push"], check=True)
+        print(f"Pushed changes successfully at {timestamp}")
+
     except subprocess.CalledProcessError as e:
         print(f"Git command failed: {e}")
 

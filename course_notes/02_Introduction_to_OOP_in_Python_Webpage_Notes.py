@@ -1,3 +1,43 @@
 """ Introduction to OOP in Python Webpage Notes 
-
+    -> outline 
+        -> introduction 
+        -> what is OOP
+        -? how to organise a program 
+            -> 1. code-centric 
+            -> 2. data-centric 
+        -> how does OOP work 
+    -> previous courses
+        -> concepts of programming
+        -> syntax
+        -> related topics 
+        -> data types, conditionals, loops, functions, packups 
+        -> IDEs, venvs, APIs, databases / interactions, debugging 
+        -> Python as a procedural scripting language 
+    -> this course
+        -> OOP (Python as a procedural scripting language)
+            -> this is used in larger codebases 
+            -> pronounced 'oop' 
+            -> this is used in different languages
+            -> ORGANISING CODE AROUND OBJECTS, RATHER THAN ACTIONS, DATA AND LOGIC 
+            -> ATTRIBUTES AND METHODS ARE RELATED TO OBJECTS
+                -> this course contains more about this 
+            -> how to organise a program 
+                -> 1. code-centric 
+                    -> we are asking what's happening 
+                    -> focusing on how the code is acting on the data
+                    -> for procedural and functional programming 
+                -> 2. data-centric
+                    -> what's being affected
+                    -> how data controls access to the code 
+                    -> this approach is used in OOP 
+            -> how does OOP work 
+                -> WE FIRST DEFINE THE DATA, AND THEN THE ACTIONS THAT HAPPEN TO IT 
+                -> THIS COURSE IS ABOUT OOP APPROACHES
+    -> summary 
+        -> this course is OOP with Python 
+        -> OOP orgainses code around objects
+        -> COMPUTER PROGRAMS CAN BE CODE-CENTRIC, OR DATA-CENTRIC 
+            -> code-centric asks what's happening 
+            -> data-centric asks what's being affected 
+    -> building an `Ingredient` class <- next  
 """
