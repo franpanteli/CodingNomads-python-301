@@ -2,7 +2,7 @@
     -> outline 
         -> introduction 
         -> what is OOP
-        -? how to organise a program 
+        -> how to organise a program 
             -> 1. code-centric 
             -> 2. data-centric 
         -> how does OOP work 
