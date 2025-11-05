@@ -39,5 +39,17 @@ ingredients = {
 print(f"Let's take {ingredients['carrots']['amount']} of {ingredients['carrots']['name']} and {ingredients['peas']['amount']} of {ingredients['peas']['name']}.")
 
 """
-    -> 
+    -> output: Let's take 3 of carrot and 12 of pea.
+    -> the issues with this classless approach 
+        -> it leaves out the plurals 
+        -> THE MAIN ISSUE WITH THIS IS THAT YOU CAN'T USE ATTRIBUTES EASILY 
+            -> e.g, accessing the amount of a certain ingredient you want
+            -> dictionaries aren't the best data structures for storing this information, classes are
+            -> we can define our own classes for this 
+    -> summary: why use a Python class 
+        -> planning the ingredient class
+        -> we can't store many attirbutes in a list (although we can in a list of tuples)
+            -> attirbutes we want to store include ingredients, and the amount of each 
+        -> ATTRIBUTES CAN BE STORED IN A DICTIONARY, BUT ACCESSING THEM IS HARDER THIS WAY (HARDER THAN IT NEEDS TO BE
+            FOR THIS CONTEXT)
 """
