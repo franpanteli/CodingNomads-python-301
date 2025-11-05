@@ -2,20 +2,25 @@ import subprocess
 import time
 import os
 import sys
+from datetime import datetime
 
 # Use a relative path to auto_git_push.py
 script_path = os.path.join(os.path.dirname(__file__), "auto_git_push.py")
 
 def run_git_push(run_count):
-    print(f"\n--- Run #{run_count} ---")
-    print("Running auto_git_push.py...")
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    print("\n" + "=" * 70)
+    print(f"AUTO GIT PUSH RUN #{run_count} | {timestamp}")
+    print("=" * 70)
+
     try:
         subprocess.run(["python3", script_path], check=True)
-        print("auto_git_push.py completed successfully.\n")
+        print("\nauto_git_push.py completed successfully.")
     except subprocess.CalledProcessError as e:
-        print(f"Error running auto_git_push.py: {e}\n")
+        print(f"\nError running auto_git_push.py: {e}")
     except FileNotFoundError:
-        print(f"Could not find script at {script_path}\n")
+        print(f"\nCould not find script at {script_path}")
+    print("-" * 70 + "\n")
 
 def progress_bar(duration=60):
     """Display a progress bar for 'duration' seconds."""
@@ -25,7 +30,7 @@ def progress_bar(duration=60):
         sys.stdout.write(f"\rWaiting for next run: |{bar}| {percent}%")
         sys.stdout.flush()
         time.sleep(1)
-    print()  # Move to a new line when done
+    print("\n")
 
 def main():
     print("Starting auto_git_push scheduler (runs every 1 minute)...\n")
