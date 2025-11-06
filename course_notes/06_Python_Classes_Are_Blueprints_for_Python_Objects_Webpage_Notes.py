@@ -1,3 +1,30 @@
 """ Python Classes Are Blueprints for Python Objects Webpage Notes 
-
+    -> outline
+        -> introduction 
+        -> what is a Python class
+        -> Python objects
+        -> custom objects
+            -> additional resources 
+        -> summary: Python classes and objects 
+    -> writing the Ingredient class 
+    -> what classes are
+        -> what an object instance of that object will look like 
+        -> what an object is 
+        -> a class is a blueprint of an object
+        -> different datatypes
+        -> list and dict types
+        -> functions to group logic and reuse code logic 
+        -> EVERYTHING IN PYTHON IS AN OBJECT <- function / list / dict
+        -> custom objects
+            -> PYTHON IS MODULAR 
+            -> YOU CAN CREATE YOUR OWN CLASS OBJECTS
+        -> the class won't do anything if it has no arguments / methods 
+            -> int / str 
+    -> next <- building our own classes
+    -> summary: clases and objects
+        -> a class defines what its instance object looks like 
+        -> classes are 'blueprints' for objects
+        -> EVERYTHIN IN PYTHON IS AN OBJECT
+        -> creating a class allows us to create custom objects
+        -> a class is a user-defined type 
 """
