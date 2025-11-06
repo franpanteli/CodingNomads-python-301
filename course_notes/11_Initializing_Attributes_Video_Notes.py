@@ -1,0 +1,3 @@
+""" Initializing Attributes Video Notes 
+
+"""
