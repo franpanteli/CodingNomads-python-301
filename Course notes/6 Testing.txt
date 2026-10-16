@@ -1,0 +1,50 @@
+PYTHON 301 — METHOD OVERRIDE IN SUBCLASSES
+Source: CodingNomads lesson by Martin Breuss (~5 min read)
+
+CORE IDEA
+- Child classes can override (replace) methods inherited from their parent class.
+- Overriding is done by defining a new method with the SAME NAME in the child class.
+- This is a form of POLYMORPHISM: same method name, different behavior depending
+  on the object type.
+
+HOW TO OVERRIDE A METHOD
+- Redefine the parent method inside the child class with the same name.
+
+    class Spice(Ingredient):
+        """Models a spice to flavor your food."""
+
+        def expire(self):
+            print(f"your {self.name} has expired. it's probably still good.")
+            self.name = "old " + self.name
+
+- The child's version REPLACES the parent's version for Spice() instances.
+
+MULTIPLE VERSIONS — DIFFERENT BEHAVIORS
+- Both classes still have an .expire() method, but they act differently:
+
+    c = Ingredient("carrots", 3)
+    p = Spice("pepper", 20)
+
+    c.expire()  # whoops, these carrots went bad...
+    p.expire()  # your pepper has expired. it's probably still good.
+
+- The __str__() from the parent (f"{self.name} ({self.amount})") still works,
+  but the .name attribute is modified differently by each class's expire():
+
+    print(c)  # expired carrots
+    print(p)  # old pepper
+
+KEY TAKEAWAYS
+- Child classes CAN override parent methods.
+- Override by re-defining a method/attribute with the SAME NAME in the child.
+- Redefinition automatically replaces the inherited version for that subclass.
+- Method overriding provides customization while keeping a consistent interface.
+- This pattern is known as polymorphism.
+
+TASKS (practice)
+1. Edit Spice.expire() to include a conditional: if the spice name is "salt",
+   print "salt never expires! ask the sea!" instead.
+2. Test: what happens if you create Ingredient("salt") and call .expire()?
+3. Create a new Vegetable() child class inheriting from Ingredient().
+   Decide which parent aspects to keep, which to override, and what to add.
+4. Next lesson: overriding the __init__() method of the parent class.
