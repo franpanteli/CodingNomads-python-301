@@ -1,3 +1,0 @@
-""" Python Methods Webpage Notes 
-
-"""
